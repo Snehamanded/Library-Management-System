@@ -1,0 +1,36 @@
+
+    body {
+      background-color:whitesmoke;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      background-color:#20c997;
+      padding: 20px;
+      text-align: center;
+    }
+    .penalty-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      padding: 20px;
+    }
+    .penalty-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .penalty-form input, .penalty-form select {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    .penalty-form button {
+      background-color:#20c997 ;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    .penalty-form button:hover {
+      background-color: #20c997;
+    }

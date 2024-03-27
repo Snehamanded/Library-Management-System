@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <link rel="stylesheet" type="text/css" href="/css/Paper.css">
+</head>
+<body>
+    <div class="papers">
+        <h2>Question Papers</h2>
+        <div class="department-selector">
+            <label for="department">Department:</label>
+            <select id="department">
+                <option value="all">All</option>
+                <option value="cs">Computer Science</option>
+                <option value="ee">Electrical Engineering</option>
+                <option value="me">Mechanical Engineering</option>
+                <option value="ec">Electronics and Communication Engineering</option>
+            </select>
+        </div>
+        <ul id="paper-list">
+            <!-- Question papers will be dynamically added here -->
+        </ul>
+    </div>
+    <script src="/js/Paper.js"></script>
+    </body>
+    </html>

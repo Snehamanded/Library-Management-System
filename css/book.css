@@ -1,0 +1,29 @@
+.dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #department {
+    border: 1px solid #ccc;
+    padding: 5px;
+    background: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 300px;
+  }
+  
+  #department::-ms-expand {
+    display: none;
+  }
+  
+  #book-list {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #fff;
+  }
+  
+  #book-list li {
+    padding: 5px;
+  }

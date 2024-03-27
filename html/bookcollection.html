@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Collection</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: hsl(181, 75%, 41%);
+    }
+    .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #1b57b8;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #subjectFilter {
+        margin-bottom: 20px;
+    }
+    .book-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .book-item {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Book Collection</h1>
+    <div>
+        <label for="subjectFilter">Sort by Subject: </label>
+        <select id="subjectFilter">
+            <option value="all">All</option>
+            <option value="CS">Computer Science</option>
+            <option value="ECE">Electronics And Communication</option>
+            <option value="AIDS">Artificial Integelligence And Data Science</option>
+			<option value="Civ">Civil</option>
+			<option value="Mech">Mechanical</option>
+			<option value="EEE">Electrical And Electronics</option>
+			<option value="BS">Basic Science</option>
+        </select>
+    </div>
+    <ul class="book-list" id="bookList">
+    </ul>
+</div>
+<script>
+    // Sample book data
+    const books = [
+        { title: "Fundamentals of Data Structures", author: "Ellis Horowitz", subject: "CS" },
+        { title: "Analog and Digital Electronics", author: "Charles H Roth", subject: "CS" },
+        { title: "Computer Organization", author: "Carl Hamacher", subject: "CS" },
+        { title: "Operating System", author: "Ann McHoes", subject: "CS" },
+        { title: "The Art Of Electronics", author: "Paul Horowitz", subject: "ECE" },
+        { title: "Electrical Technology", author: "B.L.Theraja", subject: "EEE" },
+        { title: "Electromagnetics", author: "Stevan Ellingson", subject: "EEE" },
+        { title: "Introduction To Vaccum Technology", author: "David M", subject: "EEE" },
+        { title: "Artificial Intelligence", author: "Peter Norvig", subject: "AIDS" },
+        { title: "Neural Networks", author: "Charu C", subject: "AIDS" },
+        { title: "Fundamentals of Machine Learning", author: "John D", subject: "AIDS" },
+        { title: "The New AI", author: "Ethem Alpaydin", subject: "AIDS" },
+        { title: "Earthquake Resistant Design", author: "S.K.Duggal", subject: "Civ" },
+        { title: "Surveying and Levelling", author: "N.N.Basak", subject: "Civ" },
+        { title: "The Civil ", author: "", subject: "Civ" }
+    ];
+
+    // Function to render books into the list
+    function renderBooks(subject) {
+        const bookList = document.getElementById('bookList');
+        bookList.innerHTML = ''; // Clear existing list
+
+        // Filter books by subject if specified, otherwise display all books
+        const filteredBooks = subject === 'all' ? books : books.filter(book => book.subject === subject);
+
+        filteredBooks.forEach(book => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('book-item');
+            listItem.textContent = `${book.title} - ${book.author} (${book.subject})`;
+            bookList.appendChild(listItem);
+        });
+    }
+
+    // Call the renderBooks function when the page loads to display all books initially
+    window.onload = function() {
+        renderBooks('all');
+    };
+
+    // Event listener for subject filter change
+    document.getElementById('subjectFilter').addEventListener('change', function(event) {
+        const selectedSubject = event.target.value;
+        renderBooks(selectedSubject);
+    });
+</script>
+</body>
+</html>

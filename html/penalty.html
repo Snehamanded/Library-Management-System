@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penalty Form</title>
+  <link rel="stylesheet" type="text/css" href="/css/penalty.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>Penalty Details</Details></h1>
+  </div>
+  <div class="penalty-form">
+    <form id="penalty-form">
+      <label for="book-name">Student Name:</label>
+      <input type="text" id="student-name" name="student-name" required>
+
+      <label for="book-name">USN:</label>
+      <input type="text" id="usn" name="usn" required>
+
+      <label for="book-name">Book Name:</label>
+      <input type="text" id="book-name" name="book-name" required>
+      
+      <label for="penalty-amount">Penalty Amount:</label>
+      <input type="number" id="penalty-amount" name="penalty-amount" required>
+      
+      <label for="penalty-date">Penalty Date:</label>
+      <input type="date" id="penalty-date" name="penalty-date" required>
+      
+      <label for="penalty-type">Penalty Type:</label>
+      <select id="penalty-type" name="penalty-type" required>
+        <option value="">Select Penalty Type</option>
+        <option value="late-return">Late Return</option>
+        <option value="damaged-book">Damaged Book</option>
+      </select>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="/js/penalty.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body{
+  background-color: rgb(136, 226, 190);
+}
+.papers {
+    font-family: Arial, sans-serif;
+}
+
+.department-selector {
+    margin-bottom: 10px;
+}
+
+.department-selector label {
+    display: inline-block;
+    width: 100px;
+}
+
+.department-selector select {
+    width: 200px;
+}
+
+#paper-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#paper-list li {
+    margin-bottom: 5px;
+}
+
+#paper-list a {
+    text-decoration: none;
+    color: #000;
+}
+
+#paper-list a:hover {
+    color: #007bff;
+}
